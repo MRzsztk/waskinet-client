@@ -1,0 +1,18 @@
+.newsy {
+    height: 120vh;
+    width: 100%;
+    background-color: #8d979e;
+    display: flex;
+    justify-content: center;
+}
+
+.newsy-container {
+    width: 70%;
+    padding-top: 30px;
+    background-color: #f0f4f5;
+    color: #1c424a;
+}
+
+.news-container {
+    margin: 40px 120px;
+}
