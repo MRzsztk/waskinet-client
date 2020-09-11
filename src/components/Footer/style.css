@@ -2,9 +2,18 @@
     height: 120px;
     width: 100%;
     background-color: #12303a;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #D9FDFF;
     font-family: 'VT323', monospace;
+}
+
+.footer-img {
+    height: 90px;
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+    opacity: 0.5;
 }

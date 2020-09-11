@@ -14,7 +14,6 @@ import "./style.css";
 
 export default function Oferta() {
 const [usluga, setUsluga] = useState('internet');
-const [showUsluga, setShowUsluga] = useState('internet');
 const [error, setError] = useState(null);
 const history = useHistory();
 
@@ -28,7 +27,6 @@ useEffect(() => {
             <Header />
             <div className="mid">
             <div className="mid-container">
-            {usluga}
             {<Szczegoly usluga={usluga} />}
             <NavbarOferta handlerOnClick={(e) => setUsluga(e.target.name)} />
             </div>

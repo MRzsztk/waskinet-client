@@ -1,3 +1,6 @@
 .szczegoly {
-    margin-bottom: -30px;
+    padding: 40px 120px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }

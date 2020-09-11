@@ -8,6 +8,7 @@ import "./style.css";
 export default function Header() {
     return(
         <header className="header">
+            <div className="dark-stripe"></div>
             <div className="head">
             <img className="logo" src={Logo} alt="waskinet_logo" />
             <div className="head-container">
@@ -16,6 +17,7 @@ export default function Header() {
                 <Link className="head-link" to={"/kontakt"}>kontakt</Link>
             </div>
             </div>
+            <div className="blue-stripe"></div>
         </header>
     );
 }
