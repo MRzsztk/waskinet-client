@@ -1,0 +1,9 @@
+.aa-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard-slot-half {
+    width: calc((100% - 30px)/2);
+    height: 100%;
+}

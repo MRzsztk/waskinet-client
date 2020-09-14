@@ -1,9 +1,7 @@
 .mid {
     position: relative;
-    /* margin-bottom: -30px; */
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    /* background-color: rgba(142, 152, 159, 0.55); */
     display: flex;
     justify-content: center;
     background-color: #9ca2a7;

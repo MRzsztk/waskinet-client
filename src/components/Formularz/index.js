@@ -13,6 +13,13 @@ export default function Formularz() {
     const [sent, setSent] = useState('')
 
     const handleMessageSubmit = async () => {
+        if (!email) {
+            return setSent('Podaj swój adres email, aby otrzymać odpowiedź.')
+            } else if (!topic) {
+            return setSent('Wpisz temat wiadomości.')
+            } else if (!message) {
+            return setSent('Wpisz treść wiadomości.')
+            } 
         try {
             const { data } = await api.post("/messages", {
                 message: message, topic: topic, email: email
@@ -34,7 +41,7 @@ export default function Formularz() {
             <form className="message-editor margin-10-h">
                 <input name="email" type="text" className="email-field margin-10-h" placeholder="twój adres e-mail" required={true} onChange={(e) => setEmail(e.target.value)} />
                 <input name="topic" type="text" className="topic-field" placeholder="temat..." required={true} onChange={(e) => setTopic(e.target.value)} />
-                <textarea name="message" wrap="soft" className="message-window margin-10-h" placeholder="wiadomość..." required={true} onChange={(e) => setMessage(e.target.value)} />
+                <textarea name="message" wrap="soft" className="message-window margin-10-h" placeholder="..." required={true} onChange={(e) => setMessage(e.target.value)} />
                 <button className="margin-10-h" type="button" onClick={() => handleMessageSubmit()}>WYŚLIJ</button>
                 {error && <span>{error?.message}</span>}
                 {sent && <span>{sent}</span>}

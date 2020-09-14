@@ -19,7 +19,6 @@
 
 .oferta-container {
     width: 60%;
-    /* font-size: 16px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +28,7 @@
     height: 27px;
     text-decoration: none;
     color: #12303a;
-    text-shadow: 1px 1px 1px rgba(72, 110, 136, 0.658);
+    text-shadow: 0.5px 0.5px 0.5px rgba(72, 110, 136, 0.658);
     border: none;
     background: none;
     margin: 0 30px;

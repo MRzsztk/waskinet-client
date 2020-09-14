@@ -6,10 +6,7 @@ import Header from "../../components/Header";
 import NavbarKontakt from "../../components/NavbarKontakt";
 import Footer from "../../components/Footer";
 import KontaktW from "../../components/KontaktW";
-// import Internet from "../../components/Internet";
-// import Telefon from "../../components/Telefon";
-// import Kolokacja from "../../components/Kolokacja";
-// import Hosting from "../../components/Hosting";
+
 import "./style.css";
 
 export default function Kontakt() {
@@ -19,7 +16,6 @@ const history = useHistory();
 
 useEffect(() => {
     setMethod(method);
-    console.log(method);
 }, [method])
 
     return(
