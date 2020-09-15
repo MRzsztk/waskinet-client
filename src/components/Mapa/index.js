@@ -11,9 +11,10 @@ const styles = {
 const Mapa = () => {
   const [map, setMap] = useState(null);
   const mapContainer = useRef(null);
+  const MAPBOX_API_KEY = process.env.REACT_APP_MAPBOX_API_KEY;
 
   useEffect(() => {
-    mapboxgl.accessToken = process.env.MAPBOX_ACCESS_TOKEN; 
+    mapboxgl.accessToken = MAPBOX_API_KEY; 
     const initializeMap = ({ setMap, mapContainer }) => {
         const map = new mapboxgl.Map({
           container: mapContainer.current,
