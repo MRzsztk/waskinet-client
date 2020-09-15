@@ -1,7 +1,10 @@
+.messages {
+    height: 100%;
+    overflow: scroll;
+}
 .message-container {
     height: 100%;
     width: 100%;
-    overflow: scroll;
     font-size: 14px;
     text-align: left;
     display: flex;
