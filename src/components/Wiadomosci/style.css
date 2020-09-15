@@ -27,3 +27,15 @@
 .temat {
     text-decoration: underline;
 }
+
+.usun-wiadomosc {
+    margin: 5px;
+    width: 55px;
+    height: 25px;
+    border: none;
+    background-color: rgba(14, 75, 105, 0.2);
+    color: #12303a;
+    font-size: 14px;
+    text-decoration: underline;
+    text-shadow: 1px 1px 1px rgba(72, 110, 136, 0.658);
+}

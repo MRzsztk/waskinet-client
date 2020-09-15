@@ -12,10 +12,15 @@
 .services-category {
     width: 100%;
     height: 20px;
-    margin: 6px 0;
+    margin: 12px 2px;
     display: flex;
     font-size: 20px;
     font-weight: bold;
+}
+
+.services-subcategory {
+    margin: 12px auto 6px 2px;
+    font-size: 14px;
 }
 
 .dodaj-usluge {
@@ -24,27 +29,14 @@
     display: flex;
 }
 
-.editor-field-name {
-    width: 70%;
-    height: 25px;
-    border: none;
+.dodaj-component {
+    margin-bottom: 10px;
 }
 
-.editor-field-price {
-    width: 10%;
-    margin: 10px 5px;
-    height: 25px;
-    border: none;
+.service-name {
+    margin-right: 10px;
 }
 
-.editor-field-unit {
-    width: 20%;
-    height: 25px;
-    border: none;
-}
-
-.service-btn {
-    margin: 10px 5px;
-    height: 27px;
-    border: none;
+.service-unit {
+    margin-left: 8px;
 }

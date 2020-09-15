@@ -53,8 +53,8 @@ return (<>
         {services && services.filter(service => service.category === 'internet').map(service => (
             <div key={service._id} className="service-container">
                 <div className="service-name">- {service.service}:</div>
-                <div className="service-price"><b>{service.price}zł.</b></div> 
-                {service.unit && <div>/{service.unit}</div>}
+                <div className="service-price"><b>{service.price.toFixed(2)}zł</b></div> 
+                {service.unit && <div className="service-unit">/{service.unit}</div>}
                 <button name="usun" onClick={() => deleteService(service._id)} className="news-crud-btn">usuń</button>
                 </div>
         ))}
@@ -66,8 +66,8 @@ return (<>
         {services && services.filter(service => service.category === 'telefon').map(service => (
             <div key={service._id} className="service-container">
                 <div className="service-name">- {service.service}:</div>
-                <div className="service-price"><b>{service.price}zł.</b></div> 
-                {service.unit && <div>/{service.unit}</div>}
+                <div className="service-price"><b>{service.price.toFixed(2)}zł</b></div> 
+                {service.unit && <div className="service-unit">/{service.unit}</div>}
                 <button name="usun" onClick={() => deleteService(service._id)} className="news-crud-btn">usuń</button>
                 </div>
         ))}
@@ -80,8 +80,8 @@ return (<>
         {services && services.filter(service => service.category === 'hosting' && service.subcategory === 'www').map(service => (
             <div key={service._id} className="service-container">
                 <div className="service-name">- {service.service}:</div>
-                <div className="service-price"><b>{service.price}zł.</b></div> 
-                {service.unit && <div>/{service.unit}</div>}
+                <div className="service-price"><b>{service.price.toFixed(2)}zł</b></div> 
+                {service.unit && <div className="service-unit">/{service.unit}</div>}
                 <button name="usun" onClick={() => deleteService(service._id)} className="news-crud-btn">usuń</button>
                 </div>
         ))}
@@ -92,8 +92,8 @@ return (<>
         {services && services.filter(service => service.category === 'hosting' && service.subcategory === 'vps').map(service => (
             <div key={service._id} className="service-container">
                 <div className="service-name">- {service.service}:</div>
-                <div className="service-price"><b>{service.price}zł.</b></div> 
-                {service.unit && <div>/{service.unit}</div>}
+                <div className="service-price"><b>{service.price.toFixed(2)}zł</b></div> 
+                {service.unit && <div className="service-unit">/{service.unit}</div>}
                 <button name="usun" onClick={() => deleteService(service._id)} className="news-crud-btn">usuń</button>
                 </div>
         ))}
@@ -104,8 +104,8 @@ return (<>
         {services && services.filter(service => service.category === 'hosting' && service.subcategory === 'dedykowane').map(service => (
             <div key={service._id} className="service-container">
                 <div className="service-name">- {service.service}</div>
-                {service.price && <div className="service-price"><b>: {service.price}zł.</b></div>}
-                {service.unit && <div>/{service.unit}</div>}
+                {service.price && <div className="service-price"><b>: {service.price.toFixed(2)}zł</b></div>}
+                {service.unit && <div className="service-unit">/{service.unit}</div>}
                 <button name="usun" onClick={() => deleteService(service._id)} className="news-crud-btn">usuń</button>
                 </div>
         ))}
@@ -119,8 +119,8 @@ return (<>
         {services && services.filter(service => service.category === 'kolokacja').map(service => (
             <div key={service._id} className="service-container">
                 <div className="service-name">- {service.service}:</div>
-                <div className="service-price"><b>{service.price}zł.</b></div> 
-                {service.unit && <div>/{service.unit}</div>}
+                <div className="service-price"><b>{service.price.toFixed(2)}zł</b></div> 
+                {service.unit && <div className="service-unit">/{service.unit}</div>}
                 <button name="usun" onClick={() => deleteService(service._id)} className="news-crud-btn">usuń</button>
                 </div>
         ))}

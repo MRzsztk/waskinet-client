@@ -35,10 +35,10 @@ export default function DodajUsluge({ cat, subcat, collapse}) {
         <div className="service-add-container">
             <div className="service-add-title">DODAJ USŁUGĘ: {cat}/{subcat}</div>
             <form className="dodaj-usluge">
-                <input name="service" type="text" className="editor-field-name margin-10-h" placeholder="usługa" required onChange={(e) => setService(e.target.value)} />
-                <input name="price" type="text" className="editor-field-price margin-10-h" placeholder="cena" onChange={(e) => setPrice(e.target.value)} />
-                <input name="unit" type="text" className="editor-field-unit margin-10-h" placeholder="jednostka" onChange={(e) => setUnit(e.target.value)} />
-                <button className="service-btn margin-10-h" type="button" onClick={() => handleServiceSubmit()}>DODAJ</button>
+                <input name="service" type="text" className="editor-field-name" placeholder="usługa" required onChange={(e) => setService(e.target.value)} />
+                <input name="price" type="text" className="editor-field-price" placeholder="cena" onChange={(e) => setPrice(e.target.value)} />
+                <input name="unit" type="text" className="editor-field-unit" placeholder="jednostka" onChange={(e) => setUnit(e.target.value)} />
+                <button className="service-btn" type="button" onClick={() => handleServiceSubmit()}>DODAJ</button>
                 {error && <span>{error?.message}</span>}
             </form>
             </div>

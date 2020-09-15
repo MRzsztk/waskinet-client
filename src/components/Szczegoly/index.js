@@ -1,8 +1,4 @@
-import React from 'react'
-// import Internet from "../../components/Internet";
-// import Telefon from "../../components/Telefon";
-// import Kolokacja from "../../components/Kolokacja";
-// import Hosting from "../../components/Hosting";
+import React, { useState, useEffect } from 'react'
 import './style.css'
 
 export default function Szczegoly({ usluga }) {
