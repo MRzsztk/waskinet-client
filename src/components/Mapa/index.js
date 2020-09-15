@@ -13,7 +13,7 @@ const Mapa = () => {
   const mapContainer = useRef(null);
 
   useEffect(() => {
-    mapboxgl.accessToken = "pk.eyJ1IjoibXJ6c3p0ayIsImEiOiJja2NicXFtcHMyN2RrMnZtZ2JwY2prMXFtIn0.Kve-wkiKTqkaXiD3fgG0MA"; 
+    mapboxgl.accessToken = process.env.MAPBOX_ACCESS_TOKEN; 
     const initializeMap = ({ setMap, mapContainer }) => {
         const map = new mapboxgl.Map({
           container: mapContainer.current,
