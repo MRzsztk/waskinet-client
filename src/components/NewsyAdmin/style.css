@@ -1,3 +1,9 @@
+.dashboard-newsy {
+    height: 95%;
+    padding: 10px;
+    overflow: scroll;
+}
+
 .news-crud {
     display: flex;
     flex-direction: column;

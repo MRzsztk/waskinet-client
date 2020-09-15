@@ -42,7 +42,8 @@ const deleteNews = async (newsId) => {
     return (
       <>
       <div className="dashboard-slot-title">USUŃ</div>
- {newsy.map(news => (
+      <div className="dashboard-newsy">
+      {newsy.map(news => (
             <div key={news._id} className="news-crud">
                 <div className="smalltext"><i>{news.createdAt.split('T')[0]}</i></div>
                 <div className=""><b>{news.title}</b></div>
@@ -52,9 +53,10 @@ const deleteNews = async (newsId) => {
                 <div className="crud">
                 <button name="usun" onClick={() => deleteNews(news._id)} className="news-crud-btn">usuń</button>
                 </div>
-                -----------------------------------
+                <hr />
             </div>
         ))}
+      </div>
       </>
    
     );

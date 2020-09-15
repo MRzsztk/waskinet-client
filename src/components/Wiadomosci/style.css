@@ -2,7 +2,18 @@
     height: 100%;
     overflow: scroll;
 }
+
 .message-container {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 5px 10px;
+    width: 95%;
+    height: 100%;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.message-body {
     height: 100%;
     width: 100%;
     font-size: 14px;

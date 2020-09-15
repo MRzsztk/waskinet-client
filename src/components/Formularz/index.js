@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useForm } from 'react';
 import { useHistory } from 'react-router-dom';
 import api from "../../services/api";
 
@@ -25,6 +25,9 @@ export default function Formularz() {
                 message: message, topic: topic, email: email
             });
             setSent('Wiadomość została wysłana.')
+            setEmail('')
+            setTopic('')
+            setMessage('')
             if (data?.hasOwnProperty('error')) {
                 return setError(data.error)
             }
@@ -35,14 +38,18 @@ export default function Formularz() {
         }
     }
 
+    const handleClean = () => {
+       return document.querySelectorAll('input').value='';
+    }
+
     return (<>
         <div className="message-container">
             <p className="">Co chciałbyś wiedzieć?</p>
-            <form className="message-editor margin-10-h">
-                <input name="email" type="text" className="email-field margin-10-h" placeholder="twój adres e-mail" required={true} onChange={(e) => setEmail(e.target.value)} />
-                <input name="topic" type="text" className="topic-field" placeholder="temat..." required={true} onChange={(e) => setTopic(e.target.value)} />
-                <textarea name="message" wrap="soft" className="message-window margin-10-h" placeholder="..." required={true} onChange={(e) => setMessage(e.target.value)} />
-                <button className="margin-10-h" type="button" onClick={() => handleMessageSubmit()}>WYŚLIJ</button>
+            <form onSubmit = {handleClean} className="message-editor margin-10-h">
+                <input name="email" type="text" className="email-field margin-10-h" placeholder="twój adres e-mail" required value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input name="topic" type="text" className="topic-field" placeholder="temat..." required value={topic} onChange={(e) => setTopic(e.target.value)} />
+                <textarea name="message" wrap="soft" className="message-window margin-10-h" placeholder="..." required value={message} onChange={(e) => setMessage(e.target.value)} />
+                <button className="margin-10-h" type="button" onClick={(e) => handleMessageSubmit()}>WYŚLIJ</button>
                 {error && <span>{error?.message}</span>}
                 {sent && <span>{sent}</span>}
             </form>

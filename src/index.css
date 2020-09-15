@@ -25,3 +25,8 @@ code {
 .chakra {
   font-family: 'Chakra Petch', sans-serif;
 }
+
+.scroll {
+  height: 100%;
+  overflow: scroll;
+}

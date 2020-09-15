@@ -10,7 +10,6 @@ import Kontakt from "./pages/Kontakt";
 import Login from "./pages/Login";
 import Logout from "./pages/Logout";
 import Dashboard from "./pages/Dashboard";
-// import Napisz from "./pages/Napisz";
 
 export default function Routes() {
     return (
@@ -21,7 +20,6 @@ export default function Routes() {
             <Route path="/login" exact component={Login} />
             <Route path="/dashboard" exact component={Dashboard} />
             <Route path="/logout" exact component={Logout} />
-            {/* <Route path="/news/create" exact component={Napisz}/> */}
         </BrowserRouter>
     );
 }

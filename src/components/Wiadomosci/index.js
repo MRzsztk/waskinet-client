@@ -25,22 +25,38 @@ const getMessages = async () => {
   }
 }
 
+const deleteMessage = async (messageId) => {
+  try {
+      const config = {
+          headers: { Authorization: `Bearer ${token}` }
+      };
+      await api.delete(`/messages/delete/${messageId}`, config);
+      await getMessages()
+  } catch (error) {
+      console.log(error)
+  }
+}
+
 useEffect(() => {
   getMessages()
 }, [])
 
 return (<>
     <div className="messages">
-      <div className="messages-container">
       <div className="dashboard-slot-title">WIADOMOŚCI</div>
+      <div className="m-container">
         {messages && messages.map(message => (
             <div key={message._id} className="message-container">
+            <div className="message-body">
                 <div className="nadawca">od: <b>{message.email}</b></div>
                 <div className="temat">temat: <b>{message.topic}</b></div>
                 <div className="message-content">
                 {message.message}
                 <div className="smalltext"><i>otrzymano: {message.createdAt}</i></div>
-                __________________________________
+                </div>
+                </div>
+                <div>
+                <button className="usun-wiadomosc" onClick={() => deleteMessage(message._id)} >usuń</button>
                 </div>
             </div>
         ))}
