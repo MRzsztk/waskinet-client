@@ -1,0 +1,13 @@
+.service-add-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.service-add-title {
+    font-size: 12px;
+}

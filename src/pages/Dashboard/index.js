@@ -5,6 +5,8 @@ import HeaderAdmin from "../../components/HeaderAdmin";
 import Footer from "../../components/Footer";
 import Wiadomosci from "../../components/Wiadomosci";
 import AktualnosciAdmin from "../../components/AktualnosciAdmin";
+import OfertaAdmin from "../../components/OfertaAdmin";
+
 import api from "../../services/api";
 
 import "./style.css";
@@ -35,7 +37,9 @@ export default function Dashboard() {
             <div className="dashboard-slot">
                 <AktualnosciAdmin />
             </div>
-            <div className="dashboard-slot">edytuj ofertę</div>
+            <div className="dashboard-slot">
+            <OfertaAdmin />
+            </div>
             </div>
             </div>
             <Footer />
