@@ -25,13 +25,13 @@ export default function Formularz() {
                 message: message, topic: topic, email: email
             });
             setSent('Wiadomość została wysłana.')
-            setEmail('')
-            setTopic('')
-            setMessage('')
             if (data?.hasOwnProperty('error')) {
                 return setError(data.error)
             }
             history.push('/kontakt')
+            setEmail('')
+            setTopic('')
+            setMessage('')
 
         } catch (error) {
             console.log(error)

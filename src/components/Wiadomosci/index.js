@@ -42,15 +42,15 @@ useEffect(() => {
 }, [])
 
 return (<>
-    <div className="messages">
+    <div className="messages-v">
       <div className="dashboard-slot-title">WIADOMOŚCI</div>
-      <div className="m-container">
+      <div className="v-container">
         {messages && messages.map(message => (
-            <div key={message._id} className="message-container">
+            <div key={message._id} className="message-v-container">
             <div className="message-body">
                 <div className="nadawca">od: <b>{message.email}</b></div>
                 <div className="temat">temat: <b>{message.topic}</b></div>
-                <div className="message-content">
+                <div className="message-v-content">
                 {message.message}
                 <div className="smalltext"><i>otrzymano: {message.createdAt}</i></div>
                 </div>

@@ -1,9 +1,9 @@
-.messages {
+.messages-v {
     height: 100%;
     overflow: scroll;
 }
 
-.message-container {
+.message-v-container {
     display: flex;
     flex-flow: row nowrap;
     padding: 5px 10px;
