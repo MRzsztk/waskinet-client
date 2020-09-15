@@ -8,7 +8,7 @@ export default function NavbarNewsy() {
         <nav className="navbar-oferta">
             <div className="oferta">
             <div className="nn-container">
-                <p>PLANY</p>  ·   <p>USTERKI</p>   ·   <p>NOWOŚCI</p>
+                <div>PLANY</div><div>|</div><div>USTERKI</div><div>|</div><div>NOWOŚCI</div>
             </div>
             </div>
         </nav>

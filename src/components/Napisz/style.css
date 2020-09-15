@@ -1,0 +1,30 @@
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.message-window {
+    height: 325px;
+    width: 100%;
+    padding: 0;
+    border: none;
+}
+
+.editor-field {
+    width: 100%;
+    height: 30px;
+    padding: 0;
+    border: none;
+}
+
+.publish-btn {
+    width: 95px;
+    height: 30px;
+    border: none;
+    background-color: rgba(14, 75, 105, 0.14);
+    font-size: 14px;
+    color: #12303a;
+    text-shadow: 1px 1px 1px rgba(72, 110, 136, 0.658);
+}

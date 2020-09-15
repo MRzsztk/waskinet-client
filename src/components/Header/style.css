@@ -38,17 +38,19 @@
     display: flex;
     justify-content: flex-end;
     width: 50%;
+    height: 67px;
     background-image: linear-gradient(to right, rgba(99, 158, 171,0), rgba(99, 158, 171,1) ) 
     /* background-image: linear-gradient(to right, rgba(98, 188, 208,0), rgba(98, 188, 208,1) ) */
 }
 
 .head-link {
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: #D9FDFF;
     text-shadow: 1px 1px 1px rgba(72, 110, 136, 0.9);
     margin: 0 5px;
     padding: 20px;
     text-decoration: none;
+    /* font-family: 'Chakra Petch', sans-serif; */
 }
 
 /* @media only screen and (max-width: 768px) { 

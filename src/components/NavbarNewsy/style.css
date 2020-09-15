@@ -22,23 +22,22 @@
     /* font-size: 16px; */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
-.nn-container p {
-    margin: 0 25px;
-}
-
-.oferta-link {
+.nn-container div {
+    /* margin: 0 25px; */
     height: 27px;
     text-decoration: none;
     color: #12303a;
     text-shadow: 1px 1px 1px rgba(72, 110, 136, 0.658);
     border: none;
     background: none;
-    margin: 0 30px;
+    margin: 0 20px;
+    padding-top: 10px;
     transition: 0.3s ease;
-    font-size: 16px;
+    font-size: 13px;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 .oferta-link:hover {

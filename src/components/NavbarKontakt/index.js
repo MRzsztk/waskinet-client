@@ -8,9 +8,9 @@ export default function index({ handlerOnClick }) {
         <nav className="navbar-oferta">
             <div className="oferta">
             <div className="oferta-container">
-                <button onClick={handlerOnClick} name="dane" className="oferta-link">dane firmy</button>
+                <button onClick={handlerOnClick} name="dane" className="oferta-link">DANE FIRMY</button>
                 |
-                <button onClick={handlerOnClick} name="formularz" className="oferta-link">formularz kontaktowy</button>
+                <button onClick={handlerOnClick} name="formularz" className="oferta-link">FORMULARZ KONTAKTOWY</button>
             </div>
             </div>
         </nav>

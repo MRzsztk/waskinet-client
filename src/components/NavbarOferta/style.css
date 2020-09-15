@@ -22,6 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 13px;
 }
 
 .oferta-link {
@@ -33,7 +34,8 @@
     background: none;
     margin: 0 30px;
     transition: 0.3s ease;
-    font-size: 16px;
+    font-size: 13px;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 .oferta-link:hover {

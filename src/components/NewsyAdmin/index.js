@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import {getNewsy} from "../Newsy";
 
 import './style.css';
 import api from "../../services/api";
@@ -9,6 +8,7 @@ export default function NewsyAdmin() {
   const history = useHistory()
   const [error, setError] = useState('')
   const [newsy, setNewsy] = useState([])
+  const [token, setToken] = useState(localStorage.getItem('token'))
 
 const getList = async () => {
   setNewsy([{_id: '00000000', createdAt: '', title: 'pobieram...', content: ''}])
@@ -27,9 +27,21 @@ useEffect(() => {
   getList()
 }, [])
 
+const deleteNews = async (newsId) => {
+  try {
+      const config = {
+          headers: { Authorization: `Bearer ${token}` }
+      };
+      await api.delete(`/newsy/delete/${newsId}`, config);
+      await getList()
+  } catch (error) {
+      console.log(error)
+  }
+}
+
     return (
       <>
-      <div className="dashboard-slot-title">EDYTUJ/USUŃ</div>
+      <div className="dashboard-slot-title">USUŃ</div>
  {newsy.map(news => (
             <div key={news._id} className="news-crud">
                 <div className="smalltext"><i>{news.createdAt.split('T')[0]}</i></div>
@@ -38,15 +50,12 @@ useEffect(() => {
                   {news.content}
                 </div>
                 <div className="crud">
-                <button name="edytuj" className="news-crud-btn">edytuj</button>
-                <button name="edytuj" className="news-crud-btn">usuń</button>
+                <button name="usun" onClick={() => deleteNews(news._id)} className="news-crud-btn">usuń</button>
                 </div>
-                ------------------------------------------------
+                -----------------------------------
             </div>
         ))}
       </>
    
     );
   }
-
-  //onClick={}

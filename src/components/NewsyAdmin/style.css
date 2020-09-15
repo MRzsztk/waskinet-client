@@ -12,4 +12,10 @@
 
 .news-crud-btn {
     margin: 5px;
+    width: 55px;
+    height: 20px;
+    border: none;
+    background-color: rgba(14, 75, 105, 0.14);
+    color: #12303a;
+    text-shadow: 1px 1px 1px rgba(72, 110, 136, 0.658);
 }

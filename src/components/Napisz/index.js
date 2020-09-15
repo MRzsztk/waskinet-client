@@ -30,11 +30,11 @@ export default function Napisz() {
 
     return (<>
         <div className="editor-container">
-            <div className="dashboard-slot-title">NAPISZ NIUSA</div>
+            <div className="dashboard-slot-title">NAPISZ</div>
             <form className="post-editor">
-                <input type="text" className="editor-field" placeholder="nagłówek..." required onChange={(e) => setTitle(e.target.value)} />
-                <textarea name="message" wrap="soft" className="message-window margin-10-h" placeholder="treść..." required onChange={(e) => setPost(e.target.value)} />
-                <button className="" type="button" onClick={() => handlePostSubmit()}>OPUBLIKUJ</button>
+                <input type="text" className="editor-field margin-10-h" placeholder="nagłówek..." required onChange={(e) => setTitle(e.target.value)} />
+                <textarea name="message" wrap="soft" className="message-window" placeholder="treść..." required onChange={(e) => setPost(e.target.value)} />
+                <button className="publish-btn margin-10-h" type="button" onClick={() => handlePostSubmit()}>OPUBLIKUJ</button>
                 {error && <span>{error?.message}</span>}
             </form>
         </div>
