@@ -3,6 +3,12 @@
     overflow: scroll;
 }
 
+.services hr {
+    border: 0;
+    border-bottom: 1px dashed rgb(6, 56, 77);
+    background: rgb(146, 176, 179);
+}
+
 .service-container {
     display: flex;
     justify-content: flex-start;
@@ -21,6 +27,7 @@
 .services-subcategory {
     margin: 12px auto 6px 2px;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .dodaj-usluge {
