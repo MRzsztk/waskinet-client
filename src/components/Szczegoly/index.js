@@ -1,4 +1,10 @@
 import React, { useState, useEffect } from 'react'
+
+import Server from "../../assets/server.png";
+import Landline from "../../assets/landline.png";
+import Internet from "../../assets/internet.png";
+import Things from "../../assets/bullshit.png";
+
 import './style.css'
 
 export default function Szczegoly({ usluga, services }) {
@@ -9,7 +15,10 @@ export default function Szczegoly({ usluga, services }) {
         {/* ----------------internet------------------- */}
                 {usluga==="internet" &&
                 <div>
+                <div className="opis">
                 <p>to paragraf o internecie. Należy wpisać tu coś ciekawego, aby przykuć uwagę klienta. Może być też obrazek.</p>
+                    <img src={Internet} alt="internet" className="internet-img" />
+                </div> 
                 <div className="cennik">
                 <div className="cennik-title">CENNIK</div>
                 {services.filter(service => service.category === 'internet').map(service => (
@@ -26,11 +35,11 @@ export default function Szczegoly({ usluga, services }) {
         {/* ----------------telefon------------------- */}
                 {usluga==="telefon" &&
                 <div>
-                    <p>Telefon stacjonarny.<br />
-                    Wynalazek coraz zadziej używany, niestety niezbędny w biznesie. Daje prestiż i powagę firmie. Niezastąpiony w domu np u starszych rodziców.<br />
-                    Oferta dla firm, instytucji i klientów indywidualnych:<br />
-                    Abonament (utrzymanie numeru) 10 zł miesięcznie.<br />
-                    Połączenia w UE (telefony stacjonarne) 10 gr/min.</p>
+                <div className="opis">
+                <p>Telefon stacjonarny.<br />
+                    Wynalazek coraz rzadziej używany, niestety niezbędny w biznesie. Daje prestiż i powagę firmie. Niezastąpiony w domu np u starszych rodziców.</p>
+                    <img src={Landline} alt="telefon" className="landline-img" />
+                </div> 
                     <div className="cennik">
                 <div className="cennik-title">CENNIK</div>
                 {services.filter(service => service.category === 'telefon').map(service => (
@@ -48,20 +57,13 @@ export default function Szczegoly({ usluga, services }) {
         {/* ----------------hosting------------------- */}
                 {usluga==="hosting" &&
                 <div>
-                <h3>Serwery WWW</h3>
-                    <p>1 GB HDD, Poczta, FTP, MySQL, Domeny – bez limitu   |   Transfer – 10 GB – 100 zł/rok<br />
-                    10 GB HDD, Poczta, FTP, MySQL, Domeny – bez limitu   |   Transfer – 50 GB – 200 zł/rok<br />
-                    50 GB HDD, Poczta, FTP, MySQL, Domeny – bez limitu   |   Transfer – 200 GB – 700 zł/rok</p>
-                    <h3>Servery VPS</h3>
-                    <p>Opłata za środowisko VPS: 24 zł/szt. <br />
-                    Opłata za CPU 28 zł/GHz <br />
-                    Opłata za RAM 28 zł/GB <br />
-                    Opłata za HDD 28 zł/100GB</p>
-                    <h3>Dedykowane</h3>
-                    <p>Oferta personalizowania pod potrzeby indywidualne Klienta. </p>
-                    
+                <div className="opis">
+                    <p>Oferujemy serwery WWW, VPS oraz dedykowane, dostosowane do potrzeb klienta. <br />Skontaktuj się z nami, aby poznać szczegóły. </p>
+                    <img src={Server} alt="serwer" className="server-img" />
+                </div>    
                     <div className="cennik">
                 <div className="cennik-title">CENNIK</div>
+                <br />
                 <div className="cennik-subcat">SERWERY WWW</div>
                 {services.filter(service => service.category === 'hosting' && service.subcategory === 'www').map(service => (
                 <div key={service._id} className="cennik-usluga">
@@ -70,6 +72,7 @@ export default function Szczegoly({ usluga, services }) {
                     {service.unit && <div className="service-unit">/{service.unit}</div>}
                 </div>
         ))}
+            <br />
                 <div className="cennik-subcat">SERWERY VPS</div>
                 {services.filter(service => service.category === 'hosting' && service.subcategory === 'vps').map(service => (
                 <div key={service._id} className="cennik-usluga">
@@ -78,6 +81,7 @@ export default function Szczegoly({ usluga, services }) {
                     {service.unit && <div className="service-unit">/{service.unit}</div>}
                 </div>
         ))}
+                <br />
                 <div className="cennik-subcat">SERWERY DEDYKOWANE</div>
                         {services.filter(service => service.category === 'hosting' && service.subcategory === 'dedykowane').map(service => (
                         <div key={service._id} className="cennik-usluga">
@@ -94,8 +98,11 @@ export default function Szczegoly({ usluga, services }) {
             {/* ----------------kolokacja------------------- */}
                 {usluga==="kolokacja" &&
                 <div>
-                <p>W naszej nowej serwerowni można wydzierżawić maszynę z dowolnie wybranym systemem oraz o dowolnych parametrach.</p>
-                <p>Ceny są negocjowane indywidualnie w zależności od potrzeb. Klient może dostarczyć swoją maszynę lub wydzierżawić od nas dedykowaną. <br />Zapraszamy do współpracy. Również przewidziana oferta współpracy dla pośredników.</p>
+                <div className="opis">
+                    <p><p>W naszej nowej serwerowni można wydzierżawić maszynę z dowolnie wybranym systemem oraz o dowolnych parametrach, lub dostarczyć swoją maszynę. <br />
+                Ceny są negocjowane indywidualnie w zależności od potrzeb. Zapraszamy do współpracy. Również przewidziana oferta współpracy dla pośredników.</p></p>
+                    <img src={Things} alt="serwer" className="things-img" />
+                </div>  
                 </div>        
                     }      
         </div>

@@ -5,12 +5,12 @@ import "./style.css";
 
 export default function index({ handlerOnClick }) {
     return(
-        <nav className="navbar-oferta">
-            <div className="oferta">
-            <div className="oferta-container">
-                <button onClick={handlerOnClick} name="dane" className="oferta-link">DANE FIRMY</button>
+        <nav className="navbar">
+            <div className="navbar-container">
+            <div className="navbar-content">
+                <button onClick={handlerOnClick} name="dane" className="navbar-item">DANE FIRMY</button>
                 |
-                <button onClick={handlerOnClick} name="formularz" className="oferta-link">FORMULARZ KONTAKTOWY</button>
+                <button onClick={handlerOnClick} name="formularz" className="navbar-item">FORMULARZ KONTAKTOWY</button>
             </div>
             </div>
         </nav>

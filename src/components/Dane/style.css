@@ -9,3 +9,40 @@
     width: 100%;
     line-height: 1.8em;
 }
+
+.adres-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.adres-container p {
+    margin: 0;
+}
+
+.icon-phone {
+    height: 13px;
+    margin: 0 8px -2px 1px;
+}
+
+.icon-email {
+    height: 11px;
+    margin: 0 8px -1px 1px;
+}
+
+.icon-address {
+    height: 12px;
+    margin: 5px 11px 0 4px;
+}
+
+@media only screen and (max-width: 768px) {
+ 
+    .adres {
+        flex-direction: column;
+    }
+
+    .dane {
+        width: 100%;
+        line-height: 1.4em;
+    }
+
+}

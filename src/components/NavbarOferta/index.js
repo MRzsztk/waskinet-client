@@ -5,16 +5,16 @@ import "./style.css";
 
 export default function index({ handlerOnClick }) {
     return(
-        <nav className="navbar-oferta">
-            <div className="oferta">
-            <div className="oferta-container">
-                <button onClick={handlerOnClick} name="internet" className="oferta-link">INTERNET</button>
+        <nav className="navbar">
+            <div className="navbar-container">
+            <div className="navbar-content">
+                <button onClick={handlerOnClick} name="internet" className="navbar-item">INTERNET</button>
                 |
-                <button onClick={handlerOnClick} name="telefon" className="oferta-link">TELEFON</button>
+                <button onClick={handlerOnClick} name="telefon" className="navbar-item">TELEFON</button>
                 |
-                <button onClick={handlerOnClick} name="hosting" className="oferta-link">HOSTING</button>
+                <button onClick={handlerOnClick} name="hosting" className="navbar-item">HOSTING</button>
                 |
-                <button onClick={handlerOnClick} name="kolokacja" className="oferta-link">KOLOKACJA</button>
+                <button onClick={handlerOnClick} name="kolokacja" className="navbar-item">KOLOKACJA</button>
             </div>
             </div>
         </nav>

@@ -19,7 +19,6 @@ const [usluga, setUsluga] = useState('hosting');
 const [services, setServices] = useState([])
 
 const getServices = async () => {
-//   setServices([{_id: '00000000', service: "pobieram ofertę..."}])
   try {
       const { data } = await api.get("/uslugi");
       if (data?.hasOwnProperty('error')) {

@@ -1,4 +1,4 @@
-.navbar-oferta {
+.navbar {
     width: 100%;
     height: 30px;
     display: flex;
@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.oferta {
+.navbar-container {
     width: 100%;
     height: 30px;
     display: flex;
@@ -17,15 +17,14 @@
     top: 0;
 }
 
-.oferta-container {
+.navbar-content {
     width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 13px;
 }
 
-.oferta-link {
+.navbar-item {
     height: 27px;
     text-decoration: none;
     color: #12303a;
@@ -38,6 +37,22 @@
     font-family: 'Chakra Petch', sans-serif;
 }
 
-.oferta-link:hover {
+.navbar-item:hover {
     letter-spacing: 0.1em;
+}
+
+@media only screen and (max-width: 768px) { 
+    .navbar {
+        height: 35px;
+    }
+
+    .navbar-content {
+        width: 90%;
+    }
+
+    .navbar-item {
+        margin: 0 7px;
+        font-size: 12px;
+    }
+
 }

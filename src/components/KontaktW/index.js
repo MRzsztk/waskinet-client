@@ -8,7 +8,7 @@ import './style.css'
 export default function KontaktW({ method }) {
 
     return (
-        <div className="szczegoly">
+        <div className="kontakt">
                 {method==="dane" &&
                 <Dane />}
                 {method==="formularz" &&

@@ -5,18 +5,71 @@
     align-items: center;
 }
 
+.szczegoly>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .szczegoly p {
     width: 100%;
     line-height: 1.4em;
     font-size: 18px;
 }
 
+.opis {
+    position: relative;
+    border-bottom: 4px solid #132f3a;
+    min-height: 150px;
+    width: 100%;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+.opis p {
+    width: 70%;
+    max-height: 80%;
+}
+
+.server-img {
+    margin: 15px 15px 0 15px;
+    height: 80px;
+    position: absolute;
+    bottom: -4px;
+    left: 70%;
+}
+
+.landline-img {
+    margin: 15px 15px 0 15px;
+    height: 65px;
+    position: absolute;
+    bottom: -4px;
+    left: 70%;
+}
+
+.internet-img {
+    margin: 15px 15px 0 15px;
+    height: 80px;
+    position: absolute;
+    bottom: -4px;
+    left: 70%;
+}
+
+.things-img {
+    margin: 15px 15px 0 15px;
+    height: 130px;
+    position: absolute;
+    bottom: -75px;
+    left: 70%;
+}
+
 .cennik {
-    /* height: 40px; */
+    width: 100%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     border: none;
     border-radius: 7px;
     background-color: rgba(14, 75, 105, 0.14);
@@ -35,3 +88,10 @@
     margin: 10px;
     display: flex;
 }
+
+.cennik-subcat {
+    font-size: 0.85em;
+    font-weight: bold;
+    margin: 5px 10px;
+}
+
