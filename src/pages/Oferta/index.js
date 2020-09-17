@@ -43,7 +43,6 @@ useEffect(() => {
             <Header />
             <div className="mid">
             <div className="mid-container">
-            {console.log(services)}
             {<Szczegoly usluga={usluga} services={services} />}
             <NavbarOferta handlerOnClick={(e) => setUsluga(e.target.name)} />
             </div>

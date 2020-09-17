@@ -95,3 +95,27 @@
     margin: 5px 10px;
 }
 
+@media only screen and (max-width: 768px) {
+
+    .szczegoly {
+        padding: 40px;
+    }
+
+    .opis {
+        min-height: 200px;
+        width: 100%;
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .opis p {
+        width: 100%;
+        max-height: 90%;
+    }
+
+    .things-img {
+        left: 50%;
+    }
+
+}
+

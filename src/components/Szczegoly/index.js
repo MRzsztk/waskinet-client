@@ -99,8 +99,8 @@ export default function Szczegoly({ usluga, services }) {
                 {usluga==="kolokacja" &&
                 <div>
                 <div className="opis">
-                    <p><p>W naszej nowej serwerowni można wydzierżawić maszynę z dowolnie wybranym systemem oraz o dowolnych parametrach, lub dostarczyć swoją maszynę. <br />
-                Ceny są negocjowane indywidualnie w zależności od potrzeb. Zapraszamy do współpracy. Również przewidziana oferta współpracy dla pośredników.</p></p>
+                    <p>W naszej nowej serwerowni można wydzierżawić maszynę z dowolnie wybranym systemem oraz o dowolnych parametrach, lub dostarczyć swoją maszynę. <br />
+                Ceny są negocjowane indywidualnie w zależności od potrzeb. Zapraszamy do współpracy. Również przewidziana oferta współpracy dla pośredników.</p>
                     <img src={Things} alt="serwer" className="things-img" />
                 </div>  
                 </div>        
